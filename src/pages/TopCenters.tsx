@@ -176,7 +176,13 @@ const TopCenters = () => {
       {/* Centers Grid */}
       <section className="container mx-auto px-4 pb-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {centers.map((center, index) => (
+          {centers
+            .filter((center) => {
+              const cityMatch = selectedCity === "All" || center.city === selectedCity;
+              const treatmentMatch = selectedTreatment === "All" || center.specialties.includes(selectedTreatment);
+              return cityMatch && treatmentMatch;
+            })
+            .map((center, index) => (
             <div key={index} className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all">
               <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${center.image})` }}></div>
               
@@ -209,8 +215,12 @@ const TopCenters = () => {
                 </div>
                 
                 <div className="flex gap-2">
-                  <Button variant="outline" className="flex-1 font-semibold">
-                    View Details
+                  <Button
+                    variant="outline"
+                    className="flex-1 font-semibold"
+                    onClick={() => window.location.href = `/centers/${center.city.toLowerCase()}/${center.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    View Centers
                   </Button>
                   <Button 
                     onClick={() => setQuoteModalOpen(true)}
