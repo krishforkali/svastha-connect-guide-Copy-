@@ -5,6 +5,12 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Phone, Star } from "lucide-react";
+import centerKerala from "@/assets/center-kerala.jpg";
+import centerGoa from "@/assets/center-goa.jpg";
+import centerBangalore from "@/assets/center-bangalore.jpg";
+import centerRishikesh from "@/assets/center-rishikesh.jpg";
+import centerMumbai from "@/assets/center-mumbai.jpg";
+import centerChennai from "@/assets/center-chennai.jpg";
 
 const TopCenters = () => {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
@@ -33,6 +39,7 @@ const TopCenters = () => {
       rating: 4.9,
       reviews: 234,
       priceRange: "$$$",
+      image: centerKerala,
     },
     {
       name: "Goa Holistic Healing Retreat",
@@ -42,6 +49,7 @@ const TopCenters = () => {
       rating: 4.8,
       reviews: 189,
       priceRange: "$$",
+      image: centerGoa,
     },
     {
       name: "Bangalore Wellness Institute",
@@ -51,6 +59,7 @@ const TopCenters = () => {
       rating: 4.7,
       reviews: 156,
       priceRange: "$$$",
+      image: centerBangalore,
     },
     {
       name: "Rishikesh Ayurvedic Spa",
@@ -60,6 +69,7 @@ const TopCenters = () => {
       rating: 4.9,
       reviews: 201,
       priceRange: "$$",
+      image: centerRishikesh,
     },
     {
       name: "Mumbai Ayurveda Clinic",
@@ -69,6 +79,7 @@ const TopCenters = () => {
       rating: 4.6,
       reviews: 143,
       priceRange: "$$$",
+      image: centerMumbai,
     },
     {
       name: "Chennai Traditional Healing",
@@ -78,6 +89,7 @@ const TopCenters = () => {
       rating: 4.8,
       reviews: 178,
       priceRange: "$$",
+      image: centerChennai,
     },
   ];
 
@@ -166,7 +178,7 @@ const TopCenters = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {centers.map((center, index) => (
             <div key={index} className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all">
-              <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20"></div>
+              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${center.image})` }}></div>
               
               <div className="p-6">
                 <div className="flex items-start justify-between mb-2">

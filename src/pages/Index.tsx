@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, MapPin, Phone, CheckCircle2 } from "lucide-react";
 import heroImage from "@/assets/hero-ayurveda.jpg";
-import treatmentImage from "@/assets/treatment-panchakarma.jpg";
+import centerKerala from "@/assets/center-kerala.jpg";
+import centerGoa from "@/assets/center-goa.jpg";
+import centerBangalore from "@/assets/center-bangalore.jpg";
 
 const Index = () => {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
@@ -19,6 +21,7 @@ const Index = () => {
       specialties: ["Panchakarma", "Shirodhara", "Stress Relief"],
       rating: 4.9,
       priceRange: "$$$",
+      image: centerKerala,
     },
     {
       name: "Goa Holistic Healing Retreat",
@@ -27,6 +30,7 @@ const Index = () => {
       specialties: ["Weight Management", "Detox", "Yoga Therapy"],
       rating: 4.8,
       priceRange: "$$",
+      image: centerGoa,
     },
     {
       name: "Bangalore Wellness Institute",
@@ -35,6 +39,7 @@ const Index = () => {
       specialties: ["Chronic Disease", "Joint Care", "Skin Treatments"],
       rating: 4.7,
       priceRange: "$$$",
+      image: centerBangalore,
     },
   ];
 
@@ -142,7 +147,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {featuredCenters.map((center, index) => (
               <div key={index} className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20"></div>
+                <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${center.image})` }}></div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-primary mb-2">{center.name}</h3>
                   <p className="text-sm text-muted-foreground mb-3 flex items-center gap-1">
