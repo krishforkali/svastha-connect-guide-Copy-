@@ -8,19 +8,19 @@ const serviceCards = [
   {
     title: "Ayurveda",
     description: "Discover the ancient wisdom of holistic healing through authentic Ayurvedic treatments.",
-    image: "/Services-images/Ayurveda/thumbnail.jpg",
+    image: "https://www.itoozhiayurveda.in/wp-content/uploads/2014/01/Virechana-in-Ayurveda-panchakarma-Treatment.jpg",
     href: "/services/ayurveda",
   },
   {
     title: "Panchakarma",
     description: "Experience deep cleansing and rejuvenation with traditional five-fold purification therapy.",
-    image: "/Services-images/Panchakarma/thumbnail.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdERgAIDaqie0DIBGIAVwcyb0RxyMRGS592g&s",
     href: "/services/panchakarma",
   },
   {
     title: "Yoga and Meditation",
     description: "Transform your mind and body through ancient practices of yoga and meditation.",
-    image: "/Services-images/Yoga/thumbnail.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrvPW-HDrwMuwBcSgDkEkLKVKOF9LsAawI9w&s",
     href: "/services/yoga-meditation",
   },
   {
