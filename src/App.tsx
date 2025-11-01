@@ -10,6 +10,8 @@ import Treatments from "./pages/Treatments";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import CenterDetail from "./pages/CenterDetail";
+import Services from "./pages/Services";
+import AyurvedaService from "./pages/services/Ayurveda";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/centers" element={<TopCenters />} />
           <Route path="/centers/:location" element={<LocationCenters />} />
           <Route path="/centers/:city/:centerId" element={<CenterDetail />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/ayurveda" element={<AyurvedaService />} />
           <Route path="/treatments" element={<Treatments />} />
           <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

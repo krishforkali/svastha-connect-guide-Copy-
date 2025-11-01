@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ServicesDropdown } from "@/components/ui/dropdown-services";
 
 interface NavigationProps {
   onQuoteClick: () => void;
@@ -13,6 +14,7 @@ const Navigation = ({ onQuoteClick }: NavigationProps) => {
 
   const navLinks = [
     { path: "/", label: "Home" },
+    { path: "/services", label: "Services" },
     { path: "/centers", label: "Top Centers" },
     { path: "/treatments", label: "Treatments" },
     { path: "/about", label: "About Us" },
